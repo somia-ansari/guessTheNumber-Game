@@ -1,42 +1,14 @@
-let attempt = 0;
 let aNumber = parseInt(Math.random() * 100);
+let attempt = 0;
 
-function checkEasy(){
+function check() {
+    let userNumber = parseInt(document.querySelector("input").value);
     attempt++;
-let userNumber = parseInt(document.querySelector('input').value);
-if (aNumber > userNumber) {
-    alert("Too small!!");
-}
-else if(aNumber < userNumber){
-    alert("Too big!!");
-}
-else{
-    alert('Congratulations!! You did it in '+ attempt + ' times');
-}
-}
-function checkMedium(){
-    attempt++;
-let userNumber = parseInt(document.querySelector('input').value);
-if (aNumber > userNumber) {
-    alert("Too small!!");
-}
-else if(aNumber < userNumber){
-    alert("Too big!!");
-}
-else{
-    alert('Congratulations!! You did it in '+ attempt + ' times');
-}
-}
-function checkHard(){
-    attempt++;
-let userNumber = parseInt(document.querySelector('input').value);
-if (aNumber > userNumber) {
-    alert("Too small!!");
-}
-else if(aNumber < userNumber){
-    alert("Too big!!");
-}
-else{
-    alert('Congratulations!! You did it in '+ attempt + ' times');
-}
+    if (userNumber < aNumber) {
+        document.querySelector('#result').innerHTML = "Too small..";
+    } else if (userNumber > aNumber) {
+        document.querySelector('#result').innerHTML = "Too big..";
+    } else {
+        document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
+    }
 }

@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Play with Numbers</title>
 </head>
 
 <body>
+    <header>
+        <h1>Guess the Number Game!!</h1>
+    </header>
     <main>
-        <h1>Guess the number Game!!</h1>
-        <h2>Select any one stage</h2>
-        <div id="btn">
-            <a href="easy.html"><button id="easy">Easy!</button></a>
-            <a href="medium.html"><button id="medium">Medium!</button></a>
-            <a href="hard.html"><button id="hard">Hard!</button></a>
-
+        <p id="instruction">
+            There is a number selected between 0 to 100.
+            <br> Guess the number and check if it's correct or smaller or bigger than the actual.
+        </p>
+        <div id="playground">
+            <input type="number" id="number" placeholder="Your Number here">
+            <button onclick="check()">Check your guess</button>
+            <p id="result"></p>
         </div>
     </main>
     <script src="script.js"></script>
