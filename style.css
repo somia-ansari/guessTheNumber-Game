@@ -20,10 +20,36 @@ input {
 }
 
 button {
-    background-image: linear-gradient(rgba(79, 151, 79, 0.616), rgb(131, 75, 75));
+    background-image: linear-gradient(rgba(79, 151, 79, 0.54), rgba(255, 235, 59, 0.54));
     font-size: 1.5em;
     color: indigo;
     padding: 10px;
+    cursor: pointer;
+}
+
+#instruction {
+    line-height: 30px;
+    padding: 0 20px;
+}
+
+a {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;
+    cursor: pointer;
+}
+
+span {
+    background-color: #adcbd6eb;
+    color: black;
+    padding: 0 10px;
+    margin: 0 10px;
+    width: fit-content;
+}
+
+button:hover {
+    background-image: linear-gradient(rgba(39, 200, 212, 0.54), rgba(212, 158, 38, 0.76));
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;
 }
 
 header {
@@ -34,4 +60,25 @@ p {
     color: azure;
     font-size: 1.3em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.showlevels {
+    display: block;
+    border: 2px solid gray;
+    padding: 25px;
+}
+
+.hidelevels {
+    display: none;
+}
+
+#play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#play input,
+button {
+    margin: 15px;
 }

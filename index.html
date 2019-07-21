@@ -14,16 +14,42 @@
         <h1>Guess the Number Game!!</h1>
     </header>
     <main>
-        <p id="instruction">
-            There is a number selected between 0 to 100.
-            <br> Guess the number and check if it's correct or smaller or bigger than the actual.
-        </p>
-        <div id="playground">
-            <input type="number" id="number" placeholder="Your Number here">
-            <button onclick="check()">Check your guess</button>
-            <p id="result"></p>
+        <div id="levels" class="showlevels">
+            <div id="easy">
+                <a href="#play"></a><button onclick="easy()">Easy Mode</button></a>
+                <p>In this level number is given between 0 to 100</p>
+            </div>
+            <div id="medium">
+                <a href="#play"></a><button onclick="medium()">Medium Mode</button></a>
+                <p>In this level number is given between 0 to 500</p>
+            </div>
+            <div id="hard">
+                <a href="#play"></a><button onclick="hard()">Hard Mode</button></a>
+                <p>In this level number is given between 0 to 1000</p>
+            </div>
+        </div>
+        <div id="play">
+            <p id="instruction">
+                There is a number selected between <span>0 to 100 for Easy</span>, <span>0 to 500 for Medium</span> and <span>0 to 1000 for Hard</span>.
+                <br> Guess the number and check if it's correct or smaller or bigger than the actual. Keep trying untill you get the correct one. You have 10 chances.
+            </p>
+            <a href="#levels"><button onclick="showLevels()">See the Levels</button></a>
+            <div id="playground">
+                <input type="number" id="number" placeholder="Your Number here">
+                <button onclick="check()">Check your guess</button>
+                <p id="result"></p>
+            </div>
         </div>
     </main>
+    <footer>
+        <p>
+            This page has copyright issues because it is the result of Somia's Hard work, not yours!!
+        </p>
+        <p>
+            If you like my work, Give star to the repo at
+            <a href="https://github.com/somia-ansari/guessTheNumber-Game" target="_blank">Github!</a>
+        </p>
+    </footer>
     <script src="script.js"></script>
 </body>
 

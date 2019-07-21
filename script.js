@@ -1,14 +1,46 @@
-let aNumber = parseInt(Math.random() * 100);
-let attempt = 0;
+let attempt;
+let aNumber;
+
+function easy() {
+    attempt = 0;
+    aNumber = parseInt(Math.random() * 100);
+    document.querySelector('#levels').classList.remove('showlevels');
+    document.querySelector('#levels').classList.add('hidelevels');
+}
+
+function medium() {
+    attempt = 0;
+    aNumber = parseInt(Math.random() * 500);
+    document.querySelector('#levels').classList.remove('showlevels');
+    document.querySelector('#levels').classList.add('hidelevels');
+}
+
+function hard() {
+    attempt = 0;
+    aNumber = parseInt(Math.random() * 1000);
+    document.querySelector('#levels').classList.remove('showlevels');
+    document.querySelector('#levels').classList.add('hidelevels');
+}
+
+function showLevels() {
+    document.querySelector('#levels').classList.remove('hidelevels');
+    document.querySelector('#levels').classList.add('showlevels');
+
+}
 
 function check() {
     let userNumber = parseInt(document.querySelector("input").value);
     attempt++;
-    if (userNumber < aNumber) {
-        document.querySelector('#result').innerHTML = "Too small..";
-    } else if (userNumber > aNumber) {
-        document.querySelector('#result').innerHTML = "Too big..";
+    if (attempt < 11) {
+        if (userNumber < aNumber) {
+            document.querySelector('#result').innerHTML = "Try Bigger..";
+        } else if (userNumber > aNumber) {
+            document.querySelector('#result').innerHTML = "Try Smaller..";
+        } else {
+            document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
+        }
+
     } else {
-        document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
+        alert('You Lost!! Try again')
     }
 }
