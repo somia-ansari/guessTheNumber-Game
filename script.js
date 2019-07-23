@@ -1,25 +1,27 @@
 let attempt;
 let aNumber;
 
-function easy() {
+let max;
+
+function resetValues() {
     attempt = 0;
-    aNumber = parseInt(Math.random() * 100);
+    aNumber = parseInt(Math.random() * max);
     document.querySelector('#levels').classList.remove('showlevels');
     document.querySelector('#levels').classList.add('hidelevels');
+}
+
+function easy() {
+    max = 100;
+    resetValues();
 }
 
 function medium() {
-    attempt = 0;
-    aNumber = parseInt(Math.random() * 500);
-    document.querySelector('#levels').classList.remove('showlevels');
-    document.querySelector('#levels').classList.add('hidelevels');
+    max = 1000;
+    resetValues();
 }
 
 function hard() {
-    attempt = 0;
-    aNumber = parseInt(Math.random() * 1000);
-    document.querySelector('#levels').classList.remove('showlevels');
-    document.querySelector('#levels').classList.add('hidelevels');
+    resetValues();
 }
 
 function showLevels() {
