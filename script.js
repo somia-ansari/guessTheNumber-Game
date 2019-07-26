@@ -16,11 +16,12 @@ function easy() {
 }
 
 function medium() {
-    max = 1000;
+    max = 500;
     resetValues();
 }
 
 function hard() {
+    max = 1000;
     resetValues();
 }
 
@@ -39,7 +40,7 @@ function check() {
         } else if (userNumber > aNumber) {
             document.querySelector('#result').innerHTML = "Try Smaller..";
         } 
-          else if (userNumber== ""){
+          else if (userNumber == false){
            document.querySelector('#result').innerHTML = "Try your guess by entering any number";
         }
           else {
