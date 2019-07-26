@@ -38,7 +38,11 @@ function check() {
             document.querySelector('#result').innerHTML = "Try Bigger..";
         } else if (userNumber > aNumber) {
             document.querySelector('#result').innerHTML = "Try Smaller..";
-        } else {
+        } 
+          else if (userNumber== ""){
+           document.querySelector('#result').innerHTML = "Try your guess by entering any number";
+        }
+          else {
             document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
         }
 
