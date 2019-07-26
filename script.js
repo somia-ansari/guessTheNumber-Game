@@ -32,18 +32,14 @@ function showLevels() {
 }
 
 function check() {
-    let userNumber = parseInt(document.querySelector("input").value);
+    let userNumber = Math.floor(document.querySelector("input").value);
     attempt++;
     if (attempt < 11) {
         if (userNumber < aNumber) {
             document.querySelector('#result').innerHTML = "Try Bigger..";
         } else if (userNumber > aNumber) {
             document.querySelector('#result').innerHTML = "Try Smaller..";
-        } 
-          else if (userNumber == ""){
-           document.querySelector('#result').innerHTML = "Try your guess by entering any number";
-        }
-          else if (userNumber === aNumber) {
+        } else if (userNumber === aNumber) {
             document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
         }
 
