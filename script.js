@@ -40,10 +40,10 @@ function check() {
         } else if (userNumber > aNumber) {
             document.querySelector('#result').innerHTML = "Try Smaller..";
         } 
-          else if (userNumber == false){
+          else if (userNumber == ""){
            document.querySelector('#result').innerHTML = "Try your guess by entering any number";
         }
-          else {
+          else if (userNumber === aNumber) {
             document.querySelector('#result').innerHTML = "Congratulations!! You did it in " + attempt + ' times';
         }
 
